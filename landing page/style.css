@@ -138,6 +138,11 @@ p {
 }
 
 /* LAYANAN */
+.carousel-slider > image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
 .card {
     border: 1px solid #ddd;
     transition: transform 0.3s, box-shadow 0.3s;
