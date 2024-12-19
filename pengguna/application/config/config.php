@@ -25,18 +25,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = 'http://localhost/CariTukang/pengguna';
 
+#login
+$config['url_login'] = 'http://localhost/CariTukang/assets/login/login.png';
+$config['url_person'] = 'http://localhost/CariTukang/assets/login/profil.png';
 
-
+#register
+// $config['url_hero'] = 'http://localhost/CariTukang/assets/register/hero.png';
+$config['url_register'] = 'http://localhost/CariTukang/assets/register/register.png';
 
 //untuk assets icons 
 $config['url_logoblack'] = 'http://localhost/CariTukang/assets/icon/logoblack.jpg';
-$config['url_icon'] = 'http://localhost/CariTukang/assets/icon/logowhite_prev_ui.png';
-$config['url_icon'] = 'http://localhost/CariTukang/assets/icon/logowhite.jpg';
+
+$config['url_logowhite'] = 'http://localhost/CariTukang/assets/icon/logo_white.png';
 $config['url_icon'] = 'http://localhost/CariTukang/assets/icon/cat.png';
 $config['url_icon'] = 'http://localhost/CariTukang/assets/icon/hero.png';
-$config['url_icon'] = 'http://localhost/CariTukang/assets/icon/ig.png';
-$config['url_icon'] = 'http://localhost/CariTukang/assets/icon/linkedin.png';
-$config['url_icon'] = 'http://localhost/CariTukang/assets/icon/tt.png';
+$config['url_ig'] = 'http://localhost/CariTukang/assets/icon/ig.png';
+$config['url_linkedin'] = 'http://localhost/CariTukang/assets/icon/linkedin.png';
+$config['url_tiktok'] = 'http://localhost/CariTukang/assets/icon/tt.png';
 
 /*
 |--------------------------------------------------------------------------

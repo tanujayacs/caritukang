@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #0044cc; /* Warna latar biru */
-            background-image: url(assets/Login.png); /* Tambahkan pola jika ada */
+            background-color: #0044cc;
+            /* Warna latar biru */
+            background-image: url('<?php echo $url_login; ?>');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -22,7 +24,7 @@
         }
 
         .login-container {
-            
+
             padding: 40px;
             border-radius: 15px;
             text-align: center;
@@ -79,30 +81,57 @@
         }
     </style>
 </head>
+
 <body>
+
     <div class="login-container">
         <!-- Ikon pengguna -->
-        <img src="assets/profil.png" alt="User Icon">
+        <img src="<?php echo $this->config->item('url_person'); ?>" alt="User Icon">
         <!-- Form login -->
-        <form>
+        <form method="post">
             <div class="mb-3">
-                <input type="text" class="form-control" placeholder="USERNAME" required>
+                <input type="text" placeholder="USERNAME" name="username_customer" class="form-control" value="<?php set_value("username_customer") ?>">
+                <div class="text-danger small">
+                    <?php echo form_error("username") ?>
+                </div>
             </div>
             <div class="mb-3">
-                <input type="password" class="form-control" placeholder="PASSWORD" required>
+                <input type="password" placeholder="PASSWORD" name="password_customer" class="form-control" value="<?php set_value("password_customer") ?>">
+                <div class="text-danger small">
+                    <?php echo form_error("password") ?>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary w-100">LOGIN</button>
+            <button class="btn btn-primary w-100">LOGIN</button>
         </form>
         <!-- Tautan tambahan -->
         <div class="mt-3">
             <a href="#" class="forgot-password">Forgot password?</a>
         </div>
         <div class="mt-2">
-            <span class="text-white">Belum Punya Akun? <a href="#" class="register">Register</a></span>
+            <span class="text-white">Belum Punya Akun? <a href="<?php echo base_url('register') ?>" class="register">Register</a></span>
         </div>
     </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<?php if ($this->session->flashdata('pesan_sukses')) : ?>
+    <script>
+        swal("Sukses!", "<?php echo $this->session->flashdata('pesan_sukses'); ?>", "success");
+    </script>
+
+<?php endif ?>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<?php if ($this->session->flashdata('pesan_gagal')) : ?>
+    <script>
+        swal("Gagal!", "<?php echo $this->session->flashdata('pesan_gagal'); ?>", "error");
+    </script>
+
+<?php endif ?>
+
 </html>

@@ -2,7 +2,7 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
-                    <img src="./assets/logowhite_prev_ui.png" alt="CariTukang Logo" class="footer-logo">
+                <img src="<?php echo $this->config->item('url_logowhite'); ?>" alt="CariTukang Logo" class="footer-logo">
                 </div>
                 <div>
                     <p>caritukang@gmail.com</p>
@@ -16,9 +16,9 @@
             <div class="text-center my-3">
                 <h4>Sosial Media Kami</h4>
                 <div class="social-icons">
-                    <a href="#"><img src="./assets/ig.png" alt="Instagram"></a>
-                    <a href="#"><img src="./assets/tt.png" alt="TikTok"></a>
-                    <a href="#"><img src="./assets/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="<?php echo $this->config->item('url_ig'); ?>" alt="Instagram"></a>
+                    <a href="#"><img src="<?php echo $this->config->item('url_tiktok'); ?>" alt="TikTok"></a>
+                    <a href="#"><img src="<?php echo $this->config->item('url_linkedin'); ?>" alt="LinkedIn"></a>
                 </div>
             </div>
 
